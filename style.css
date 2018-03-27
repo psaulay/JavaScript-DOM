@@ -27,3 +27,10 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+.rectangle {
+ width:100px;
+ height:100px;
+ background:blue;
+ margin:10px auto;
+}
