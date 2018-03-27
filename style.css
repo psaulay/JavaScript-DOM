@@ -31,6 +31,7 @@
 .rectangle {
  width:100px;
  height:100px;
- background:blue;
+ background:#0000ff;
  margin:10px auto;
+    display: block;
 }
