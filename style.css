@@ -28,6 +28,15 @@
   text-decoration: none;
 }
 
-p {
-  font-size: 15px;
+.rectangle {
+ width:100px;
+ height:100px;
+ background:#0000ff;
+ margin:10px auto;
+    display: block;
+}
+
+p{
+    text-align: center;
+    cursor: zoom-in;
 }
