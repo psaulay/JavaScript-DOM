@@ -3,12 +3,11 @@ function Add10px(){
     var taille = x.offsetHeight; 
     //si var taille < 300px
     if (taille < 300) {
-    // ajouter 10px 
-    x.style.height = taille + 10 + 'px';
-    return}
+        // ajouter 10px 
+        x.style.height = taille + 10 + 'px';
+        return}
     //sinon revenir à 100px
     x.style.height = 100 + 'px';
-  
 }
 
 function Green() {
@@ -20,6 +19,7 @@ function RestoreColor() {
     var x = document.getElementById("rectangle");
     x.style.backgroundColor = "#0000ff";
 }
+
 function Hide() {
     var x = document.getElementById("rectangle");
 
@@ -32,6 +32,7 @@ function Reveal() {
     x.style.display = "block";        
 } 
 
+<<<<<<< HEAD
 var textNode = document.getElementById("text");
 
 function fontSizer(){
@@ -44,3 +45,21 @@ function fontSizer(){
 }
 
 textNode.addEventListener("click",fontSizer);
+=======
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+    var x = document.getElementById("rectangle");
+    var taille = x.offsetHeight; 
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        
+        x.style.height = taille + 100 + 'px';
+        sleep(1000);
+        x.style.height = taille - 100 + 'px';
+        
+        return}
+}
+
+>>>>>>> 8c2dacbf579c167cebc0818964ffbe465bf81af2

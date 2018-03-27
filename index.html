@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Projet JS/DOM</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -13,11 +14,13 @@
 
             Sed laeditur hic coetuum magnificus splendor levitate paucorum incondita, ubi nati sunt non reputantium, sed tamquam indulta licentia vitiis ad errores lapsorum ac lasciviam. ut enim Simonides lyricus docet, beate perfecta ratione vieturo ante alia patriam esse convenit gloriosam.
         </p>
-        <button name="btn_1" id="btn_1" class="btn" onclick="Add10px()">bouton 1</button>
-        <button name="btn_2" id="btn_2" class="btn" onclick="Green()">bouton 2</button>
-        <button name="btn_3" id="btn_3" class="btn" onclick="RestoreColor()">bouton 3</button>
-        <button name="btn_4" id="btn_4" class="btn" onclick="Hide()">bouton 4</button>
-        <button name="btn_5" id="btn_5" class="btn" onclick="Reveal()">bouton 5</button>
+        <div class="row justify-content-center">
+            <button name="btn_1" id="btn_1" class="btn col-2" onclick="Add10px()">Agrandir le rectangle</button>
+            <button name="btn_2" id="btn_2" class="btn col-2" onclick="Green()">mettre le rectangle en vert</button>
+            <button name="btn_3" id="btn_3" class="btn col-2" onclick="RestoreColor()">mettre le rectangle en bleu</button>
+            <button name="btn_4" id="btn_4" class="btn col-2" onclick="Hide()">masquer le rectangle</button>
+            <button name="btn_5" id="btn_5" class="btn col-2" onclick="Reveal()">afficher le rectangle</button>
+        </div>
         <div name="rectangle" id="rectangle" class="rectangle"></div>
         <script src="script.js"></script>
     </body>
