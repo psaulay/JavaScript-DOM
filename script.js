@@ -32,7 +32,6 @@ function Reveal() {
     x.style.display = "block";        
 } 
 
-<<<<<<< HEAD
 var textNode = document.getElementById("text");
 
 function fontSizer(){
@@ -45,21 +44,26 @@ function fontSizer(){
 }
 
 textNode.addEventListener("click",fontSizer);
-=======
-document.onkeydown = checkKey;
 
+document.onkeydown = checkKey;
 function checkKey(e) {
     var x = document.getElementById("rectangle");
-    var taille = x.offsetHeight; 
     e = e || window.event;
 
     if (e.keyCode == '38') {
         
-        x.style.height = taille + 100 + 'px';
-        sleep(1000);
-        x.style.height = taille - 100 + 'px';
+        x.style.marginTop = '0px';  
         
-        return}
+        }
 }
+document.onkeyup = checkKey2;
+function checkKey2(e) {
+    var x = document.getElementById("rectangle");
+    e = e || window.event;
 
-
+    if (e.keyCode == '38') {
+        
+        x.style.marginTop = '100px';  
+        
+        }
+}

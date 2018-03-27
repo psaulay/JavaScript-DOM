@@ -33,7 +33,8 @@
  height:100px;
  background:#0000ff;
  margin:10px auto;
-    display: block;
+ display: block;
+ margin-top: 100px;
 }
 p{
     text-align: center;
