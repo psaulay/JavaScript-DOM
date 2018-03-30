@@ -49,15 +49,52 @@ function fontSizer(){
 // attendre que l'élément clique ce produise sur la div text pour ancer la foction fontSizer
 textNode.addEventListener("click",fontSizer);
 
-//quand l'utilisateur à enfoncer une touche lancer la fonction checkKey 
-document.onkeydown = checkKey;
-function checkKey(e) {
-    var x = document.getElementById("rectangle");
-    e = e || window.event;
-    // si la touche enfoncée correspond au keycode 38 
-    if (e.keyCode == '38') {
-        //appliquer à la marge du haut une valeur de 0px
-        x.style.top = 10 + 'px';  
 
+
+var cadre = document.querySelector('#cadre');
+// variables objet v
+var r = document.querySelector('#rectangle'); 
+var x; var y ; 
+var move = 10;
+// programmation des touches de direction 
+document.onkeydown = function(event) { 
+if (event.keyCode == 37) gauche(r.offsetLeft); 
+if (event.keyCode == 39) droite(r.offsetLeft) ; 
+if (event.keyCode == 38) haut(r.offsetTop); 
+if (event.keyCode == 40) bas(r.offsetTop); 
+} // fin fonction
+
+// quatre fonctions de déplacement 
+function gauche(left) { 
+
+    if (left > 10){
+    return  r.style.left = left - move + "px";
     }
+return r.style.left = "0px";
+} 
+
+function droite(left) {
+
+    if(left > (cadre.offsetWidth - move))
+        return r.style.left = cadre.offsetWidth + "px";
+
+    if((left + r.offsetWidth) < cadre.offsetWidth)
+        return r.style.left = left + move + "px";
 }
+
+function haut(top) { 
+
+    if (top > 10){
+    return  r.style.top = top - move + "px";
+    }
+return r.style.top = "0px";
+} 
+
+function bas(top) {
+
+    if(top > (cadre.offsetHeight - move))
+        return r.style.top = cadre.offsetHeight + "px";
+
+    if((top + r.offsetHeight) < cadre.offsetHeight)
+        return r.style.top = top + move + "px";
+} 
