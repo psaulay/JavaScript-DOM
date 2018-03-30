@@ -57,19 +57,7 @@ function checkKey(e) {
     // si la touche enfoncée correspond au keycode 38 
     if (e.keyCode == '38') {
         //appliquer à la marge du haut une valeur de 0px
-        x.style.marginTop = '0px';  
-
-    }
-}
-//quand l'utilisateur relache une touche lancer la fonction checkKey2 
-document.onkeyup = checkKey2;
-function checkKey2(e) {
-    var x = document.getElementById("rectangle");
-    e = e || window.event;
-    // si la touche relachée correspond au keycode 38 
-    if (e.keyCode == '38') {
-
-        x.style.marginTop = '100px';  
+        x.style.top = 10 + 'px';  
 
     }
 }

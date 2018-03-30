@@ -25,13 +25,19 @@ font-family: fantasy;
   opacity: 0.7;
 }
 
+.container-rec{
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rectangle {
  width:100px;
  height:100px;
  background:#1F628D;
- margin:10px auto;
- display: block;
- margin-top: 100px;
+ position: absolute;
 }
 
 p{
@@ -47,6 +53,7 @@ h1{
     color: white;
     text-align: center;
     margin-bottom: 1%;
+    margin-top: 1%;
 }
 
 h2{
