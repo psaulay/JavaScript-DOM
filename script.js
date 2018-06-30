@@ -42,7 +42,7 @@ function fontSizer(){
         //appliquer une taille de police de 15px 
         textNode.style.fontSize= "15px";
         //sinon appliquer une taille de police de 20px 
-    } else{
+    } else {
         textNode.style.fontSize= "20px"
     }
 }
@@ -54,23 +54,25 @@ textNode.addEventListener("click",fontSizer);
 var cadre = document.querySelector('#cadre');
 // variables objet v
 var r = document.querySelector('#rectangle'); 
-var x; var y ; 
+var x;
+var y; 
 var move = 10;
+
 // programmation des touches de direction 
 document.onkeydown = function(event) { 
-if (event.keyCode == 37) gauche(r.offsetLeft); 
-if (event.keyCode == 39) droite(r.offsetLeft) ; 
-if (event.keyCode == 38) haut(r.offsetTop); 
-if (event.keyCode == 40) bas(r.offsetTop); 
-} // fin fonction
+    if (event.keyCode == 37) gauche(r.offsetLeft); 
+    if (event.keyCode == 39) droite(r.offsetLeft) ; 
+    if (event.keyCode == 38) haut(r.offsetTop); 
+    if (event.keyCode == 40) bas(r.offsetTop); 
+}
 
 // quatre fonctions de déplacement 
 function gauche(left) { 
 
     if (left > 10){
-    return  r.style.left = left - move + "px";
+        return  r.style.left = left - move + "px";
     }
-return r.style.left = "0px";
+    return r.style.left = "0px";
 } 
 
 function droite(left) {
@@ -85,9 +87,9 @@ function droite(left) {
 function haut(top) { 
 
     if (top > 10){
-    return  r.style.top = top - move + "px";
+        return  r.style.top = top - move + "px";
     }
-return r.style.top = "0px";
+    return r.style.top = "0px";
 } 
 
 function bas(top) {
